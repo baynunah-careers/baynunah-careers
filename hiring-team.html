@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)file:///C:/Users/MohammadIsmaelSudall/Downloads/Recruitment%20Portal/hiring-team.html.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Hiring Team • Baynunah Recruitment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* GLOBAL */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    background: #F3F4F6;
+    color: #002B5C;
+}
+
+/* WRAPPER */
+.wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(22px);
+    border-radius: 18px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.09);
+}
+
+/* HEADER */
+.header-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.sub {
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+/* PROGRESS */
+.progress-track {
+    width: 100%;
+    height: 6px;
+    background: #D8DFE8;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.progress-fill {
+    background: #2E5BBA;
+    height: 6px;
+    width: 40%;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.stage-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 10px;
+}
+
+/* BUTTONS */
+.primary-btn {
+    background: #002B5C;
+    color: white;
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.primary-btn:hover {
+    background: #083b7e;
+}
+
+.option-btn {
+    padding: 12px;
+    width: 100%;
+    background: #E9EFF7;
+    border: none;
+    border-radius: 10px;
+    margin-top: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.option-btn:hover {
+    background: #D8E6F3;
+}
+
+/* SWITCH */
+.switch-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggle {
+    width: 50px;
+    height: 26px;
+    background: #cbd5e1;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.toggle::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: .25s;
+}
+.toggle.active {
+    background: #2E5BBA;
+}
+.toggle.active::after {
+    left: 27px;
+}
+
+/* SLOT INPUT */
+input[type=time] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #CBD5E1;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* MODAL */
+.modal-bg {
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(6px);
+    justify-content:center;
+    align-items:center;
+    z-index: 10;
+}
+.modal-card {
+    width: 380px; 
+    background: rgba(255,255,255,0.9);
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 8px 22px rgba(0,0,0,0.15);
+}
+
+.close-btn {
+    margin-top: 15px;
+    width: 100%;
+    background: #002B5C;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+    line-height: 1.4;
+}
+</style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- HEADER -->
+    <div class="card">
+        <div class="header-title">Hiring Team Panel</div>
+        <div class="sub">Internal view • Baynunah Recruitment</div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="card">
+        <div style="font-weight:700;">Candidate Progress</div>
+        <div class="progress-track"><div class="progress-fill"></div></div>
+        <div class="stage-labels">
+            <span>Application</span>
+            <span>Assessment</span>
+            <span>Interview</span>
+            <span>Offer</span>
+            <span>Acceptance</span>
+        </div>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="card">
+        <div style="font-weight:700; margin-bottom:10px;">Actions</div>
+
+        <!-- Assessment toggle -->
+        <div class="switch-row">
+            <div style="font-size:15px;">Technical Assessment Needed</div>
+            <div id="toggleAssessment" class="toggle" onclick="toggleAssessment()"></div>
+        </div>
+
+        <!-- Slot selection -->
+        <button class="primary-btn" onclick="openSlots()">Select Interview Slots</button>
+
+        <!-- Generate Updated Candidate Pass -->
+        <button class="primary-btn">Generate Updated Candidate Pass →</button>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        Baynunah 2025<br>
+        Concept by Ismael Sudally
+    </div>
+
+</div>
+
+<!-- MODAL: INTERVIEW SLOTS -->
+<div class="modal-bg" id="modalSlots" style="display: none;">
+    <div class="modal-card">
+
+        <h3 style="margin-top:0;">Available Interview Slots</h3>
+        <p style="opacity:0.8; font-size:14px;">Choose up to 3 slots</p>
+
+        <input type="time" id="slot1">
+        <input type="time" id="slot2">
+        <input type="time" id="slot3">
+
+        <button class="close-btn" onclick="closeSlots()">Save</button>
+
+    </div>
+</div>
+
+<script>
+/* Toggle */
+function toggleAssessment() {
+    let t = document.getElementById("toggleAssessment");
+    t.classList.toggle("active");
+}
+
+/* Slots modal */
+function openSlots() {
+    document.getElementById("modalSlots").style.display = "flex";
+}
+function closeSlots() {
+    document.getElementById("modalSlots").style.display = "none";
+    alert("Slots saved.");
+}
+</script>
+
+
+</body></html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)file:///C:/Users/MohammadIsmaelSudall/Downloads/Recruitment%20Portal/candidate.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Candidate Pass • Baynunah Recruitment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* GLOBAL */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    background: #F3F4F6;
+    color: #002B5C;
+}
+
+/* WRAPPER */
+.wrapper {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(22px);
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 22px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+/* PROFILE */
+.profile-header {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.profile-circle {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #2E5BBA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* PROGRESS BAR */
+.progress-container {
+    margin-top: 12px;
+}
+.progress-track {
+    width: 100%;
+    height: 6px;
+    background: #D8DFE8;
+    border-radius: 10px;
+}
+.progress-fill {
+    height: 6px;
+    background: #2E5BBA;
+    width: 40%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.stage-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* BUTTON */
+.primary-btn {
+    background: #002B5C;
+    color: white;
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.primary-btn:hover {
+    background: #083b7e;
+}
+
+/* WHATSAPP */
+.wa-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    margin-top: 15px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    background: #34C759;
+    color: white;
+}
+.wa-btn:hover {
+    background: #28a745;
+}
+
+/* MODAL */
+.modal-bg {
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(6px);
+    align-items:center;
+    justify-content:center;
+    z-index: 10;
+}
+.modal-card {
+    background: rgba(255,255,255,0.8);
+    padding: 25px;
+    width: 350px;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.15);
+}
+.option-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    background: #E9EFF7;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #002B5C;
+    cursor: pointer;
+}
+.option-btn:hover {
+    background: #D3E0F0;
+}
+
+.close-btn {
+    margin-top: 15px;
+    width: 100%;
+    background: #002B5C;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.7;
+    line-height: 1.4;
+}
+</style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- PROFILE -->
+    <div class="card">
+        <div class="profile-header">
+            <div class="profile-circle">CN</div>
+            <div>
+                <div style="font-weight:700; font-size:18px;">Candidate Name</div>
+                <div style="font-size:13px; opacity:0.7;">Application ID: APP-2025-001</div>
+                <div style="font-size:14px; margin-top:4px;">candidate@email.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CURRENT STAGE -->
+    <div class="card">
+        <div style="font-weight:700; margin-bottom:10px;">Current Stage</div>
+        <div style="font-size:15px;">Interview</div>
+        <div style="font-size:13px; opacity:0.8;">Stage 3 of 5</div>
+
+        <div class="progress-container">
+            <div class="progress-track">
+                <div class="progress-fill"></div>
+            </div>
+
+            <div class="stage-labels">
+                <span>Application</span>
+                <span>Assessment</span>
+                <span>Interview</span>
+                <span>Offer</span>
+                <span>Acceptance</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEXT STEPS -->
+    <div class="card">
+        <div style="font-weight:700; margin-bottom:10px;">Next Steps</div>
+        <div style="font-size:14px; opacity:0.9;">
+            Your interview is scheduled. You will receive a confirmation email shortly.
+        </div>
+    </div>
+
+    <!-- Start Assessment -->
+    <button class="primary-btn" onclick="openFitTest()">Start Cultural Fit Test →</button>
+
+    <!-- WhatsApp -->
+    <a class="wa-btn" href="https://wa.me/971564966546?text=Hi%20Ismael%2C%20I%20need%20assistance%20with%20my%20application." target="_blank">
+        WhatsApp Ismael
+    </a>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        Baynunah 2025<br>
+        Concept by Ismael Sudally
+    </div>
+
+</div>
+
+
+<!-- MODAL: CULTURAL FIT TEST -->
+<div class="modal-bg" id="modalFitTest">
+    <div class="modal-card">
+
+        <h3 style="margin-top:0;">Cultural Fit Test</h3>
+
+        <p style="font-size:14px; opacity:0.85;">Select the option that best fits you:</p>
+
+        <button class="option-btn">I prefer structured teams</button>
+        <button class="option-btn">I prefer flexible/creative teams</button>
+        <button class="option-btn">I enjoy independent work</button>
+        <button class="option-btn">I enjoy collaborative work</button>
+
+        <button class="close-btn" onclick="closeFitTest()">Submit</button>
+    </div>
+</div>
+
+<script>
+function openFitTest() {
+    document.getElementById("modalFitTest").style.display = "flex";
+}
+
+function closeFitTest() {
+    document.getElementById("modalFitTest").style.display = "none";
+    alert("Thank you! Your Cultural Fit Test has been submitted.");
+}
+</script>
+
+
+</body></html>
